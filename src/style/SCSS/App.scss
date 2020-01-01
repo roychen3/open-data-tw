@@ -1,0 +1,384 @@
+https://www.palettable.io/C9D41E-000D34-000000-CCCCCC-FEFEFE
+$opendata-black: #000000;
+$opendata-white: #fefefe;
+$opendata-yellow: #c9d41e;
+$opendata-blue: #000d34;
+$opendata-gray: #cccccc;
+
+//$opendata-blue: #3094c2;
+$box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+
+* {
+  margin: 0;
+  font-family: "Raleway", "Noto Sans TC", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  color: $opendata-black;
+  background-color: $opendata-white;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  color: $opendata-yellow;
+  background-color: $opendata-blue;
+
+  h1 {
+    padding: 40px;
+  }
+
+  .header-tab-column {
+    padding: 0 40px;
+
+    .header-tab {
+      color: $opendata-yellow;
+      font-size: 12px;
+      padding: 10px;
+      margin-right: 2px;
+      display: inline-block;
+
+      &:hover {
+        color: $opendata-blue;
+        background-color: $opendata-gray;
+      }
+    }
+
+    .active {
+      color: $opendata-blue;
+      background-color: $opendata-white;
+
+      &:hover {
+        color: $opendata-blue;
+        background-color: $opendata-white;
+      }
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto 0;
+
+  .select-bar {
+    color: $opendata-blue;
+    background-color: $opendata-gray;
+    width: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 12px;
+    position: relative;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    p {
+      display: inline;
+    }
+
+    .fa-caret-down {
+      padding-left: 28px;
+    }
+
+    .select-option {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      color: $opendata-blue;
+      background-color: $opendata-gray;
+      box-shadow: $box-shadow;
+      height: 300px;
+      overflow-y: scroll;
+      display: none;
+
+      /* width */
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: $opendata-blue;
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $opendata-white;
+      }
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: $opendata-yellow;
+      }
+
+      .option {
+        padding: 10px;
+        transition: 0.5s;
+
+        &:hover {
+          color: $opendata-yellow;
+          background-color: $opendata-blue;
+        }
+      }
+      .selected {
+        color: $opendata-yellow;
+        background-color: $opendata-blue;
+      }
+    }
+
+    &:hover {
+      color: $opendata-yellow;
+      background-color: $opendata-blue;
+    }
+
+    .show-select-option {
+      display: inline-block;
+    }
+  }
+
+  .weather {
+    background-color: $opendata-blue;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: $box-shadow;
+    margin-bottom: 50px;
+
+    .weather-location {
+      color: $opendata-yellow;
+      margin-bottom: 20px;
+    }
+
+    .weather-card-container {
+      display: flex;
+      flex-direction: row;
+
+      .weather-card {
+        width: 33.333%;
+        background-color: $opendata-white;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 5px;
+        box-shadow: $box-shadow;
+        transition: 0.3s;
+
+        .weather-time {
+          font-size: 12px;
+          margin-bottom: 10px;
+
+          .start-time {
+            display: inline-block;
+          }
+
+          .end-time {
+            display: inline-block;
+          }
+        }
+
+        .weather-description {
+          font-size: 14px;
+        }
+
+        .weather-temperature {
+          text-align: center;
+          font-size: 26px;
+          font-weight: 800;
+          margin: 20px 0;
+        }
+
+        .rain-probability {
+          font-size: 18px;
+        }
+
+        &:hover {
+          margin: 0 5px 10px;
+        }
+      }
+    }
+  }
+
+  // ------ hiliday ------
+  #search {
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+    color: $opendata-blue;
+    background-color: $opendata-gray;
+    letter-spacing: 1px;
+
+    &::placeholder {
+      color: $opendata-white;
+    }
+    &:focus {
+      color: $opendata-yellow;
+      background-color: $opendata-blue;
+    }
+  }
+
+  .holiday-table {
+    color: $opendata-blue;
+    white-space: nowrap;
+
+    th {
+      padding: 20px;
+      font-size: 20px;
+      color: $opendata-yellow;
+      background-color: $opendata-blue;
+      box-shadow: $box-shadow;
+      position: sticky;
+      top: 0;
+    }
+
+    tr {
+      transition: 0.5s;
+
+      td {
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      td:last-child {
+        white-space: initial;
+        word-wrap: break-word;
+      }
+
+      &:hover {
+        color: $opendata-black;
+        background-color: $opendata-gray;
+      }
+    }
+
+    .work-day {
+      color: $opendata-blue;
+      background-color: $opendata-yellow;
+
+      &:hover {
+        //color: $holiday-white;
+      }
+    }
+  }
+}
+
+.message-model {
+  color: $opendata-yellow;
+  background-color: $opendata-blue;
+  min-width: 140px;
+  width: 20%;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  #message {
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+    transform: translateY(-50%);
+  }
+}
+
+.fa-spinner {
+  animation-name: loading;
+  animation-iteration-count: infinite;
+  animation-duration: 0.9s;
+  animation-timing-function: linear;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .container {
+    width: 95%;
+
+    .weather {
+      .weather-card-container {
+        flex-direction: column;
+
+        .weather-card {
+          width: 100%;
+        }
+      }
+    }
+
+    .holiday-table {
+      th {
+        padding: 20px 5px;
+        //white-space: initial;
+        font-size: 14px;
+      }
+      tr {
+        td {
+          font-size: 12px;
+          padding: 20px 5px;
+          white-space: initial;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 90%;
+
+    .weather {
+      .weather-card-container {
+        flex-wrap: wrap;
+
+        .weather-card {
+          width: 47%;
+        }
+      }
+    }
+
+    .holiday-table {
+      th {
+        padding: 20px 5px;
+      }
+
+      tr {
+        td {
+          padding: 20px 5px;
+        }
+
+        td:nth-child(3) {
+          white-space: initial;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 90%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

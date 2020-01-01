@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  font-family: "Raleway", "Noto Sans TC", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #000000;
+  background-color: #fefefe;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  color: #c9d41e;
+  background-color: #000d34;
+}
+header h1 {
+  padding: 40px;
+}
+header .header-tab-column {
+  padding: 0 40px;
+}
+header .header-tab-column .header-tab {
+  color: #c9d41e;
+  font-size: 12px;
+  padding: 10px;
+  margin-right: 2px;
+  display: inline-block;
+}
+header .header-tab-column .header-tab:hover {
+  color: #000d34;
+  background-color: #cccccc;
+}
+header .header-tab-column .active {
+  color: #000d34;
+  background-color: #fefefe;
+}
+header .header-tab-column .active:hover {
+  color: #000d34;
+  background-color: #fefefe;
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto 0;
+}
+.container .select-bar {
+  color: #000d34;
+  background-color: #cccccc;
+  width: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 12px;
+  position: relative;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.container .select-bar p {
+  display: inline;
+}
+.container .select-bar .fa-caret-down {
+  padding-left: 28px;
+}
+.container .select-bar .select-option {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  color: #000d34;
+  background-color: #cccccc;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  height: 300px;
+  overflow-y: scroll;
+  display: none;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.container .select-bar .select-option::-webkit-scrollbar {
+  width: 10px;
+}
+.container .select-bar .select-option::-webkit-scrollbar-track {
+  background: #000d34;
+}
+.container .select-bar .select-option::-webkit-scrollbar-thumb {
+  background: #fefefe;
+}
+.container .select-bar .select-option::-webkit-scrollbar-thumb:hover {
+  background: #c9d41e;
+}
+.container .select-bar .select-option .option {
+  padding: 10px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.container .select-bar .select-option .option:hover {
+  color: #c9d41e;
+  background-color: #000d34;
+}
+.container .select-bar .select-option .selected {
+  color: #c9d41e;
+  background-color: #000d34;
+}
+.container .select-bar:hover {
+  color: #c9d41e;
+  background-color: #000d34;
+}
+.container .select-bar .show-select-option {
+  display: inline-block;
+}
+.container .weather {
+  background-color: #000d34;
+  border-radius: 10px;
+  padding: 30px;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+}
+.container .weather .weather-location {
+  color: #c9d41e;
+  margin-bottom: 20px;
+}
+.container .weather .weather-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.container .weather .weather-card-container .weather-card {
+  width: 33.333%;
+  background-color: #fefefe;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 5px;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.container .weather .weather-card-container .weather-card .weather-time {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.container .weather .weather-card-container .weather-card .weather-time .start-time {
+  display: inline-block;
+}
+.container .weather .weather-card-container .weather-card .weather-time .end-time {
+  display: inline-block;
+}
+.container .weather .weather-card-container .weather-card .weather-description {
+  font-size: 14px;
+}
+.container .weather .weather-card-container .weather-card .weather-temperature {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+.container .weather .weather-card-container .weather-card .rain-probability {
+  font-size: 18px;
+}
+.container .weather .weather-card-container .weather-card:hover {
+  margin: 0 5px 10px;
+}
+.container #search {
+  width: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  color: #000d34;
+  background-color: #cccccc;
+  letter-spacing: 1px;
+}
+.container #search::-webkit-input-placeholder {
+  color: #fefefe;
+}
+.container #search::-moz-placeholder {
+  color: #fefefe;
+}
+.container #search:-ms-input-placeholder {
+  color: #fefefe;
+}
+.container #search::-ms-input-placeholder {
+  color: #fefefe;
+}
+.container #search::placeholder {
+  color: #fefefe;
+}
+.container #search:focus {
+  color: #c9d41e;
+  background-color: #000d34;
+}
+.container .holiday-table {
+  color: #000d34;
+  white-space: nowrap;
+}
+.container .holiday-table th {
+  padding: 20px;
+  font-size: 20px;
+  color: #c9d41e;
+  background-color: #000d34;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.container .holiday-table tr {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.container .holiday-table tr td {
+  padding: 20px;
+  font-size: 14px;
+}
+.container .holiday-table tr td:last-child {
+  white-space: initial;
+  word-wrap: break-word;
+}
+.container .holiday-table tr:hover {
+  color: #000000;
+  background-color: #cccccc;
+}
+.container .holiday-table .work-day {
+  color: #000d34;
+  background-color: #c9d41e;
+}
+.message-model {
+  color: #c9d41e;
+  background-color: #000d34;
+  min-width: 140px;
+  width: 20%;
+  height: 100px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.message-model #message {
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.fa-spinner {
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@media (max-width: 575.98px) {
+  .container {
+    width: 95%;
+  }
+  .container .weather .weather-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .weather .weather-card-container .weather-card {
+    width: 100%;
+  }
+  .container .holiday-table th {
+    padding: 20px 5px;
+    font-size: 14px;
+  }
+  .container .holiday-table tr td {
+    font-size: 12px;
+    padding: 20px 5px;
+    white-space: initial;
+    word-wrap: break-word;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 90%;
+  }
+  .container .weather .weather-card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .weather .weather-card-container .weather-card {
+    width: 47%;
+  }
+  .container .holiday-table th {
+    padding: 20px 5px;
+  }
+  .container .holiday-table tr td {
+    padding: 20px 5px;
+  }
+  .container .holiday-table tr td:nth-child(3) {
+    white-space: initial;
+    word-wrap: break-word;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 90%;
+  }
+}
