@@ -127,6 +127,24 @@ class Weather extends React.Component {
     this.setState(state => ({ city: selected }));
   }
 
+  getLocalWeatherDatas() {
+    console.log("getLocalWeatherDatas");
+    let url =
+      "./localDatas/weather.json";
+    fetch(url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(myJson => {
+        let resultDatas = myJson.cwbopendata.dataset.location;
+        this.setState(state => ({ isLoading: false, webDatas: resultDatas }));
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState(state => ({ isLoading: false, isError: true }));
+      });
+  }
+
   getWeatherDatas() {
     console.log("getWeather");
     let url =
@@ -141,7 +159,7 @@ class Weather extends React.Component {
       })
       .catch(error => {
         console.log(error);
-        this.setState(state => ({ isLoading: false, isError: true }));
+        this.getLocalWeatherDatas();
       });
   }
 

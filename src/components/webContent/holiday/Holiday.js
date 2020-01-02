@@ -59,6 +59,24 @@ class Holiday extends React.Component {
     }
   }
 
+  getLocalHolidayDatas(){
+    console.log("getLocalHolidayDatas");
+    let localFile =
+      "./localDatas/holiday.json";
+    fetch(localFile)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(myJson => {
+        let resultDatas = myJson.result.records;
+        this.setState(state => ({ isLoading: false, webDatas: resultDatas }));
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState(state => ({ isLoading: false, isError: true }));
+      });
+  }
+
   getHolidayDatas() {
     console.log("getHoliday");
     let url =
@@ -73,7 +91,7 @@ class Holiday extends React.Component {
       })
       .catch(error => {
         console.log(error);
-        this.setState(state => ({ isLoading: false, isError: true }));
+        this.getLocalHolidayDatas();
       });
   }
 
