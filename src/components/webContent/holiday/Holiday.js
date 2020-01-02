@@ -1,7 +1,7 @@
 import React from "react";
-import { switchDay, filterDatas } from "../community/community";
-import WebMessage from "../community/WebMessage";
-import SearchInput from "../community/SearchInput";
+import { switchDay, filterDatas } from "../commons/commons";
+import WebMessage from "../commons/WebMessage";
+import SearchInput from "../commons/SearchInput";
 import HolidayTableData from "./HolidayTableData";
 
 function dataToHoliday(allHolidayData, year) {

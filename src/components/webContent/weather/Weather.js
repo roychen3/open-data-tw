@@ -1,7 +1,7 @@
 import React from "react";
-import { filterDatas } from "../community/community";
-import SelectOption from "../community/SelectOption";
-import WebMessage from "../community/WebMessage";
+import { filterDatas } from "../commons/commons";
+import SelectOption from "../commons/SelectOption";
+import WebMessage from "../commons/WebMessage";
 import WeatherCard from "./WeatherCard";
 
 function dataToWeather(datas, condition) {

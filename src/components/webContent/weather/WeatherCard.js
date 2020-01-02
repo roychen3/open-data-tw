@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { switchDay } from "../community/community";
+import { switchDay } from "../commons/commons";
 export class WeatherCard extends Component {
   render() {
     let startWeatherDate = new Date(this.props.dayInfo.startTime);
