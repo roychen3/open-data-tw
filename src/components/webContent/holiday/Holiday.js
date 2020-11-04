@@ -79,6 +79,8 @@ class Holiday extends React.Component {
 
   getHolidayDatas() {
     console.log("getHoliday");
+    // 備用網頁，手動下載用：
+    // https://data.ntpc.gov.tw/datasets/308DCD75-6434-45BC-A95F-584DA4FED251
     let url =
       "https://cors-anywhere.herokuapp.com/http://data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-000077-002";
     fetch(url)
